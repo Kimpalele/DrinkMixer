@@ -33,8 +33,7 @@ void loop() { // run over and over
       //Reads the received string and adds it into our string to be compared
       String drink = Serial.readString(); 
 
-      //We have to remove the trailing newline for the comparison to work
-      //We could add \n to every string comparison but this is better
+      //Had to remove trailing newline for the comparison to work correctly
       drink.trim();
       
       if (drink == "Cranberry"){
