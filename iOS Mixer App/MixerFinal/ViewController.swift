@@ -2,8 +2,6 @@
 import UIKit
 import CoreBluetooth
 
-//Background color #1d2222
-
 var productName = "Drinkmixer 2.0"
 
 final class ViewController: UIViewController, BluetoothSerialDelegate {
@@ -96,7 +94,7 @@ final class ViewController: UIViewController, BluetoothSerialDelegate {
         }
     }
     
-    //30 sec
+    //Currently 5 sec for demo
     func showDrinkAlert() {
         alert = UIAlertController(title: "Heads up!", message: "Drink in the making", preferredStyle: .alert)
         present(alert, animated: true)
@@ -104,7 +102,7 @@ final class ViewController: UIViewController, BluetoothSerialDelegate {
             #selector(ViewController.dismissAlert), userInfo: nil, repeats: false)
     }
     
-    //7 sec
+    //Currently 5 sec for demo
     func showPreparePumpAlert() {
         alert = UIAlertController(title: "Commencing..", message: "Preparing pump", preferredStyle: .alert)
         present(alert, animated: true)
@@ -112,7 +110,7 @@ final class ViewController: UIViewController, BluetoothSerialDelegate {
             #selector(ViewController.dismissAlert), userInfo: nil, repeats: false)
     }
     
-    //37 sec
+    //Currently 5 sec for demo
     func showPrepareAllPumpsAlert() {
         alert = UIAlertController(title: "Commencing..", message: "Preparing all pumps", preferredStyle: .alert)
         present(alert, animated: true)
@@ -120,7 +118,7 @@ final class ViewController: UIViewController, BluetoothSerialDelegate {
             #selector(ViewController.dismissAlert), userInfo: nil, repeats: false)
     }
     
-    //2 min
+    //Currently 5 sec for demo
     func showCleaningAlert() {
         alert = UIAlertController(title: "Cleaning", message: "Performing cleaning program\nPlease hold!", preferredStyle: .alert)
         present(alert, animated: true)
@@ -132,8 +130,8 @@ final class ViewController: UIViewController, BluetoothSerialDelegate {
         alert.dismiss(animated: true)
     }
 
-    //Checks if device is connected. If so the buttonpress
-    //will disconnect device, if not, open scannerscreen
+    //Checks if device is connected. If so, the buttonpress
+    //will disconnect device, if not, open scanner screen
     @IBAction func connectButton(_ sender: Any) {
         if serial.connectedPeripheral == nil {
             performSegue(withIdentifier: "Scanner", sender: self)
@@ -143,11 +141,9 @@ final class ViewController: UIViewController, BluetoothSerialDelegate {
         }
     }
     
-    //MARK: Button functions
-    
-    
     //TODO: Check for possibility to merge into fewer functions with different
-    //Parameters depending on which button was pressed.
+    //Parameters depending on which button was pressed. 
+    //This was done because the lack of time
     @IBAction func drinkOne(_ sender: Any) {
         if notConnected(){
             NSLog("Not Connected")
