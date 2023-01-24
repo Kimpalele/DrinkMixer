@@ -8,6 +8,7 @@ void setup() {
     ; // wait for serial port to connect. Needed for native USB port only
   }
 
+  //Configure the arduino pins to output
   pinMode(pump1, OUTPUT); 
   pinMode(pump2, OUTPUT); 
   pinMode(pump3, OUTPUT);
