@@ -94,11 +94,11 @@ final class ViewController: UIViewController, BluetoothSerialDelegate {
         }
     }
     
-    //Currently 5 sec for demo
+    //Currently 12 sec for demo
     func showDrinkAlert() {
         alert = UIAlertController(title: "Heads up!", message: "Drink in the making", preferredStyle: .alert)
         present(alert, animated: true)
-        Timer.scheduledTimer(timeInterval: 5, target: self, selector:
+        Timer.scheduledTimer(timeInterval: 12, target: self, selector:
             #selector(ViewController.dismissAlert), userInfo: nil, repeats: false)
     }
     
@@ -110,19 +110,19 @@ final class ViewController: UIViewController, BluetoothSerialDelegate {
             #selector(ViewController.dismissAlert), userInfo: nil, repeats: false)
     }
     
-    //Currently 5 sec for demo
+    //Currently 12 sec for demo
     func showPrepareAllPumpsAlert() {
         alert = UIAlertController(title: "Commencing..", message: "Preparing all pumps", preferredStyle: .alert)
         present(alert, animated: true)
-        Timer.scheduledTimer(timeInterval: 5, target: self, selector:
+        Timer.scheduledTimer(timeInterval: 12, target: self, selector:
             #selector(ViewController.dismissAlert), userInfo: nil, repeats: false)
     }
     
-    //Currently 5 sec for demo
+    //Currently 12 sec for demo
     func showCleaningAlert() {
         alert = UIAlertController(title: "Cleaning", message: "Performing cleaning program\nPlease hold!", preferredStyle: .alert)
         present(alert, animated: true)
-        Timer.scheduledTimer(timeInterval: 5, target: self, selector:
+        Timer.scheduledTimer(timeInterval: 12, target: self, selector:
             #selector(ViewController.dismissAlert), userInfo: nil, repeats: false)
     }
     
