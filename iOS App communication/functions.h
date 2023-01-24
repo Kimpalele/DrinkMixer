@@ -1,3 +1,7 @@
+//2000 mS ≈ 1 cL
+//relayPin 1 = arduinoPin 2
+//. . . . .
+//relayPin 6 = arduinoPin 7
 
 const int pump1 = 2;    //VODKA
 const int pump2 = 3;    //CRANBERRY
