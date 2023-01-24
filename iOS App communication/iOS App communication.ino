@@ -40,33 +40,33 @@ void loop() { // run over and over
         VodkaCranberry();
         Serial.println(drink);
       } else if (drink == "Redbull"){
-        //VodkaRedbull();
+        VodkaRedbull();
         Serial.println(drink);
       } else if (drink == "Screwdriver"){
-        //Screwdriver();
+        Screwdriver();
       } else if (drink == "Pump1"){
-        //prepareSpecific(pump1);
+        prepareSpecific(pump1);
         Serial.println("Done");
       } else if (drink == "Pump2"){
-        //prepareSpecific(pump2);
+        prepareSpecific(pump2);
         Serial.println("Done");
       } else if (drink == "Pump3"){
-        //prepareSpecific(pump3);
+        prepareSpecific(pump3);
         Serial.println("Done");
       } else if (drink == "Pump4"){
-        //prepareSpecific(pump4);
+        prepareSpecific(pump4);
         Serial.println("Done");
       } else if (drink == "Pump5"){
-        //prepareSpecific(pump5);
+        prepareSpecific(pump5);
         Serial.println("Done");
       } else if (drink == "Pump6"){
-        //prepareSpecific(pump6);
+        prepareSpecific(pump6);
         Serial.println("Done");
       } else if (drink == "prepareAll") {
-        //prepareAll();
+        prepareAll();
         Serial.println("Done");
       } else if (drink == "cleanAll") {
-        //Cleaning();
+        Cleaning();
         Serial.println("Done");
       } else {
         Serial.println("Unrecognizeable string ! ! !");
