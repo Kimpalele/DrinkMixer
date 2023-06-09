@@ -1,119 +1,63 @@
-//2000 mS ≈ 1 cL
-//relayPin 1 = arduinoPin 2
-//. . . . .
-//relayPin 6 = arduinoPin 7
 
-const int pump1 = 2;    //VODKA
-const int pump2 = 3;    //CRANBERRY
-const int pump3 = 4;    //REDBULL
-const int pump4 = 5;    //etc
-const int pump5 = 6;
-const int pump6 = 7;
+const int vodka = 2;    //vodka
+const int cranberry = 3;    //cranberry
+const int redbull = 4;    //redbull
+const int sprite = 5;    //etc
+const int gin = 6;
+const int juice = 7;
+const int six = 12000; //12 sec for 6 cL
+const int eight = 16000; //16 sec for 8 cL
 
-int TimeBetweenPours = 500;
+int timeBetweenPours = 500;
 
-//shorter time for demo purposes
-void VodkaCranberry(){
-  digitalWrite(pump1, HIGH);
-  delay(4000);
-  digitalWrite(pump1, LOW);
-  delay(TimeBetweenPours);
-  digitalWrite(pump2, HIGH);
-  delay(8000);
-  digitalWrite(pump2, LOW);
+void MixDrink(int booze, int dilution, int strength){
+
+  digitalWrite(booze, HIGH);
+  delay(strength);            
+  digitalWrite(booze, LOW);
+  delay(timeBetweenPours);
+  digitalWrite(dilution, HIGH);
+  delay((strength * 2) + 8000);             
+  digitalWrite(dilution, LOW);
+
 }
 
 //shorter time for demo purposes
-void VodkaRedbull(){
-  digitalWrite(pump1, HIGH);
-  delay(4000);
-  digitalWrite(pump1, LOW);
-  delay(TimeBetweenPours);
-  digitalWrite(pump3, HIGH);
-  delay(8000);
-  digitalWrite(pump3, LOW);
-}
-
-//shorter time for demo purposes
-void Screwdriver(){
-  digitalWrite(pump1, HIGH);
-  delay(4000);
-  digitalWrite(pump1, LOW);
-  delay(TimeBetweenPours);
-  digitalWrite(pump4, HIGH);
-  delay(8000);
-  digitalWrite(pump4, LOW);
-}
-
-//shorter time for demo purposes
-void prepareSpecific(int pump){
-
+void CleanSpecific(int pump){
   digitalWrite(pump, HIGH);
-  delay(3000);
+  delay(6000);
   digitalWrite(pump, LOW);
-  delay(TimeBetweenPours);
+  delay(timeBetweenPours);
 }
 
 //shorter time for demo purposes
-void prepareAll(){
+void CleanAll(){
+  digitalWrite(vodka, HIGH);
+  delay(20000);
+  digitalWrite(vodka, LOW);
+  delay(timeBetweenPours);
 
-  digitalWrite(pump1, HIGH);
-  delay(2000);
-  digitalWrite(pump1, LOW);
-  delay(TimeBetweenPours);
+  digitalWrite(cranberry, HIGH);
+  delay(20000);
+  digitalWrite(cranberry, LOW);
+  delay(timeBetweenPours);
 
-  digitalWrite(pump2, HIGH);
-  delay(2000);
-  digitalWrite(pump2, LOW);
-  delay(TimeBetweenPours);
+  digitalWrite(redbull, HIGH);
+  delay(20000);
+  digitalWrite(redbull, LOW);
+  delay(timeBetweenPours);
 
-  digitalWrite(pump3, HIGH);
-  delay(2000);
-  digitalWrite(pump3, LOW);
-  delay(TimeBetweenPours);
+  digitalWrite(sprite, HIGH);
+  delay(20000);
+  digitalWrite(sprite, LOW);
+  delay(timeBetweenPours);
 
-  digitalWrite(pump4, HIGH);
-  delay(2000);
-  digitalWrite(pump4, LOW);
-  delay(TimeBetweenPours);
+  digitalWrite(gin, HIGH);
+  delay(20000);
+  digitalWrite(gin, LOW);
+  delay(timeBetweenPours);
 
-  digitalWrite(pump5, HIGH);
-  delay(2000);
-  digitalWrite(pump5, LOW);
-  delay(TimeBetweenPours);
-
-  digitalWrite(pump6, HIGH);
-  delay(2000);
-  digitalWrite(pump6, LOW);
-}
-//shorter time for demo purposes
-void Cleaning(){
-  digitalWrite(pump1, HIGH);
-  delay(2000);
-  digitalWrite(pump1, LOW);
-  delay(TimeBetweenPours);
-
-  digitalWrite(pump2, HIGH);
-  delay(2000);
-  digitalWrite(pump2, LOW);
-  delay(TimeBetweenPours);
-
-  digitalWrite(pump3, HIGH);
-  delay(2000);
-  digitalWrite(pump3, LOW);
-  delay(TimeBetweenPours);
-
-  digitalWrite(pump4, HIGH);
-  delay(2000);
-  digitalWrite(pump4, LOW);
-  delay(TimeBetweenPours);
-
-  digitalWrite(pump5, HIGH);
-  delay(2000);
-  digitalWrite(pump5, LOW);
-  delay(TimeBetweenPours);
-
-  digitalWrite(pump6, HIGH);
-  delay(2000);
-  digitalWrite(pump6, LOW);
+  digitalWrite(juice, HIGH);
+  delay(20000);
+  digitalWrite(juice, LOW);
 }
