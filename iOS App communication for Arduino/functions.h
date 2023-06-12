@@ -32,32 +32,10 @@ void CleanSpecific(int pump){
 
 //shorter time for demo purposes
 void CleanAll(){
-  digitalWrite(vodka, HIGH);
-  delay(20000);
-  digitalWrite(vodka, LOW);
-  delay(timeBetweenPours);
-
-  digitalWrite(cranberry, HIGH);
-  delay(20000);
-  digitalWrite(cranberry, LOW);
-  delay(timeBetweenPours);
-
-  digitalWrite(redbull, HIGH);
-  delay(20000);
-  digitalWrite(redbull, LOW);
-  delay(timeBetweenPours);
-
-  digitalWrite(sprite, HIGH);
-  delay(20000);
-  digitalWrite(sprite, LOW);
-  delay(timeBetweenPours);
-
-  digitalWrite(gin, HIGH);
-  delay(20000);
-  digitalWrite(gin, LOW);
-  delay(timeBetweenPours);
-
-  digitalWrite(juice, HIGH);
-  delay(20000);
-  digitalWrite(juice, LOW);
+  for (int i = 2; i < 8; i++) {
+    digitalWrite(i, HIGH);
+    delay(15000);
+    digitalWrite(i, LOW);
+    delay(timeBetweenPours);
+  }
 }
