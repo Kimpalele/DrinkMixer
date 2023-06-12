@@ -22,7 +22,6 @@ void MixDrink(int booze, int dilution, int strength){
 
 }
 
-//shorter time for demo purposes
 void CleanSpecific(int pump){
   digitalWrite(pump, HIGH);
   delay(6000);
@@ -30,7 +29,6 @@ void CleanSpecific(int pump){
   delay(timeBetweenPours);
 }
 
-//shorter time for demo purposes
 void CleanAll(){
   for (int i = 2; i < 8; i++) {
     digitalWrite(i, HIGH);
